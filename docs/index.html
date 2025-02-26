@@ -78,103 +78,73 @@
 							<p><strong>Check out some of our recent work,</strong> showcasing the care and dedication we put into every detail. Whether it’s a basic wash or a complete detailing service, we ensure that your car gets the attention it deserves. Below are some videos and photos of our past projects, highlighting the results we deliver.</p>
 
 							<!-- Section -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Fix</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        .slider {
-            position: relative;
-            max-width: 800px;
-            width: 100%;
-            overflow: hidden;
-        }
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .slides img {
-            width: 100%;
-            height: auto;
-        }
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-        }
-        .arrow.left {
-            left: 10px;
-        }
-        .arrow.right {
-            right: 10px;
-        }
-        @media (min-width: 768px) {
-            .container {
-                flex-direction: row;
-                justify-content: space-around;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="slider">
-            <button class="arrow left">&#9665;</button>
-            <div class="slides">
-                <img src="image1.jpg" alt="Image 1">
-                <img src="image2.jpg" alt="Image 2">
-                <img src="image3.jpg" alt="Image 3">
+<!-- Section -->
+<section>
+    <header>
+    </header>
+    <div class="content">
+        <div class="gallery">
+            <a href="docs/images/gallery/IMG_5104.jpg" class="landscape">
+                <img src="images/gallery/IMG_5104.jpg" alt="Gallery Image" class="main-image" />
+            </a>
+            <div class="before-after">
+                <a href="images/gallery/fulls/02.jpg">
+                    <img src="images/gallery/thumbs/02.jpg" alt="Gallery Thumbnail 02" class="side-image" />
+                </a>
+                <a href="images/gallery/fulls/03.jpg">
+                    <img src="images/gallery/thumbs/03.jpg" alt="Gallery Thumbnail 03" class="side-image" />
+                </a>
             </div>
-            <button class="arrow right">&#9655;</button>
         </div>
     </div>
-    <script>
-        const slides = document.querySelector(".slides");
-        const images = document.querySelectorAll(".slides img");
-        const leftArrow = document.querySelector(".arrow.left");
-        const rightArrow = document.querySelector(".arrow.right");
-        let index = 0;
+</section>
 
-        function showSlide(i) {
-            if (i >= images.length) index = 0;
-            if (i < 0) index = images.length - 1;
-            slides.style.transform = `translateX(-${index * 100}%)`;
+<style>
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Increased space between images */
+        width: 100%;
+        max-width: 700px; /* Updated max width */
+        margin: auto;
+    }
+    
+    .main-image {
+        width: 100%;
+        height: auto;
+        max-height: 800px; /* Adjusted max height */
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    .before-after {
+        display: flex;
+        width: 100%;
+        gap: 15px; /* Added more gap between side images */
+        justify-content: center;
+        flex-wrap: wrap; /* Ensures the images wrap in smaller screens */
+    }
+    
+    .side-image {
+        width: 48%; /* Ensures two side images fit well */
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 767px) {
+        .before-after {
+            flex-direction: column; /* Stack images vertically on small screens */
+            align-items: center;
         }
-
-        leftArrow.addEventListener("click", () => {
-            index--;
-            showSlide(index);
-        });
         
-        rightArrow.addEventListener("click", () => {
-            index++;
-            showSlide(index);
-        });
-    </script>
-</body>
-</html>
+        .side-image {
+            width: 80%; /* Ensures side images take more space on small screens */
+        }
+    }
+</style>
+
 					<section id="fourth">
 						<header>
 							<h2>Services</h2>
