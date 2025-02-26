@@ -85,14 +85,14 @@
     <div class="content">
         <div class="gallery">
             <a href="docs/images/gallery/IMG_5104.jpg" class="landscape">
-                <img src="images/gallery/IMG_5104.jpg" alt="Gallery Image" />
+                <img src="images/gallery/IMG_5104.jpg" alt="Gallery Image" class="main-image" />
             </a>
             <div class="before-after">
                 <a href="images/gallery/fulls/02.jpg">
-                    <img src="images/gallery/thumbs/02.jpg" alt="Gallery Thumbnail 02" />
+                    <img src="images/gallery/thumbs/02.jpg" alt="Gallery Thumbnail 02" class="side-image" />
                 </a>
                 <a href="images/gallery/fulls/03.jpg">
-                    <img src="images/gallery/thumbs/03.jpg" alt="Gallery Thumbnail 03" />
+                    <img src="images/gallery/thumbs/03.jpg" alt="Gallery Thumbnail 03" class="side-image" />
                 </a>
             </div>
         </div>
@@ -105,29 +105,31 @@
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
     }
     
-    .gallery img {
+    .main-image {
         width: 100%;
-        max-width: 585px;
         height: auto;
         max-height: 1110px;
-        display: block;
+        object-fit: cover;
+        border-radius: 10px;
     }
     
     .before-after {
         display: flex;
-        gap: 10px;
         width: 100%;
-        max-width: 585px;
+        gap: 10px;
         justify-content: center;
     }
     
-    .before-after img {
-        width: 100%;
-        max-width: 48%;
+    .side-image {
+        width: 48%;
         height: auto;
-        object-fit: contain;
+        object-fit: cover;
+        border-radius: 10px;
     }
     
     @media (max-width: 767px) {
@@ -135,12 +137,12 @@
             flex-direction: row;
         }
         
-        .before-after img {
-            width: 48%;
-            max-width: 48%;
+        .side-image {
+            width: 50%;
         }
     }
 </style>
+
 
 
 
