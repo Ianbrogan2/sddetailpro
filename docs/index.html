@@ -68,25 +68,22 @@
 					</section>
 
 				<!-- Section -->
-					<section id="third">
-						<header>
-							<h2>Our Work</h2>
-							<li style="list-style-type: none;"><a href="#fourth" class="arrow scrolly"><span class="label">Next</span></a></li>
-
-						</header>
-						<div class="content">
-							<p><strong>Check out some of our recent work,</strong> showcasing the care and dedication we put into every detail. Whether it’s a basic wash or a complete detailing service, we ensure that your car gets the attention it deserves. Below are some videos and photos of our past projects, highlighting the results we deliver.</p>
-
-							<!-- Section -->
-<!-- Section -->
-<section>
+<section id="third">
     <header>
+        <h2>Our Work</h2>
+        <li style="list-style-type: none;"><a href="#fourth" class="arrow scrolly"><span class="label">Next</span></a></li>
     </header>
-		<div class="content" style="height: auto;">
-    <span class="image" style="display: block; width: 100%; height: auto;">
-        <img src="images/gallery/IMG_5104.jpg" alt="" style="width: 100%; height: auto;" />
-    </span>
-</div>
+    <div class="content">
+        <p><strong>Check out some of our recent work,</strong> showcasing the care and dedication we put into every detail. Whether it’s a basic wash or a complete detailing service, we ensure that your car gets the attention it deserves. Below are some videos and photos of our past projects, highlighting the results we deliver.</p>
+
+        <!-- Gallery Section -->
+        <div class="gallery">
+            <!-- Main Image -->
+            <span class="image">
+                <img src="images/gallery/IMG_5104.jpg" alt="Main Gallery Image" class="main-image" />
+            </span>
+
+            <!-- Before & After Gallery -->
             <div class="before-after">
                 <a href="images/gallery/fulls/02.jpg">
                     <img src="images/gallery/thumbs/02.jpg" alt="Gallery Thumbnail 02" class="side-image" />
@@ -104,30 +101,30 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px; /* Increased space between images */
+        gap: 20px;
         width: 100%;
-        max-width: 700px; /* Updated max width */
+        max-width: 700px;
         margin: auto;
     }
-    
+
     .main-image {
         width: 100%;
         height: auto;
-        max-height: 800px; /* Adjusted max height */
+        max-height: 800px;
         object-fit: cover;
         border-radius: 10px;
     }
-    
+
     .before-after {
         display: flex;
         width: 100%;
-        gap: 15px; /* Added more gap between side images */
+        gap: 15px;
         justify-content: center;
-        flex-wrap: wrap; /* Ensures the images wrap in smaller screens */
+        flex-wrap: wrap;
     }
-    
+
     .side-image {
-        width: 48%; /* Ensures two side images fit well */
+        width: 48%;
         height: auto;
         object-fit: cover;
         border-radius: 10px;
@@ -135,12 +132,12 @@
 
     @media (max-width: 767px) {
         .before-after {
-            flex-direction: column; /* Stack images vertically on small screens */
+            flex-direction: column;
             align-items: center;
         }
-        
+
         .side-image {
-            width: 80%; /* Ensures side images take more space on small screens */
+            width: 80%;
         }
     }
 </style>
