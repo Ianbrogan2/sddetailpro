@@ -45,10 +45,6 @@
 						</header>
 						<div class="content">
 							<p><strong>Hi, I'm Alec Cardenas,</strong>  the owner of SD Detail Pro. As a high school student here in Chula Vista, California, I’ve combined my love for cars with my drive to offer professional detailing and washing services. Coming from a Mexican family, I’ve learned the value of hard work and attention to detail, which I apply to every job I take on. My goal is to give your car the care it deserves, making sure it looks its absolute best, inside and out.
-</p>
-							<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-						</div>
-					</section>
 
 				<!-- Section -->
 					<section id="second">
@@ -122,23 +118,30 @@
     
     .before-after {
         display: flex;
-        flex-direction: column;
         gap: 10px;
         width: 100%;
         max-width: 585px;
+        justify-content: center;
     }
     
-    @media (min-width: 768px) {
+    .before-after img {
+        width: 50%;
+        max-width: 290px;
+        height: auto;
+    }
+    
+    @media (max-width: 767px) {
         .before-after {
             flex-direction: row;
-            justify-content: center;
         }
         
         .before-after img {
-            max-width: 48%;
+            width: 50%;
+            max-width: 50%;
         }
     }
 </style>
+
 
 					<section id="fourth">
 						<header>
